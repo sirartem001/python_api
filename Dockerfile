@@ -9,7 +9,8 @@ COPY . .
 
 ENV PYTHONPATH=/app
 
-RUN pytest --alluredir=allure-results
+RUN pytest --alluredir=allure-results --cov=app --cov-report=xml
+
 
 FROM python:3.10-slim
 
