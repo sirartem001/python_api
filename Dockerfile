@@ -9,7 +9,7 @@ COPY . .
 
 ENV PYTHONPATH=/app
 
-RUN pytest
+RUN pytest --alluredir=allure-results
 
 FROM python:3.10-slim
 
